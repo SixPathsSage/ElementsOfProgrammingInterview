@@ -15,6 +15,10 @@ public class DutchNationalFlag {
         twoPassSort(array, pivot);
     }
 
+    /*
+    * Time Complexity: O(n)
+    * Space Complexity: O(1)
+    * */
     private void twoPassSort(int[] array, int pivot) {
         // Left to Right
         for(int i = -1, j = 0; j < array.length; j ++) {
