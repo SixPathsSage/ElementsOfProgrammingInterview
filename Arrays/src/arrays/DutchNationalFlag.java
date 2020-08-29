@@ -12,7 +12,7 @@ package arrays;
 public class DutchNationalFlag {
 
     public void sort(int[] array, int pivot) {
-        twoPassSort(array, pivot);
+        optimisedSort(array, pivot);
     }
 
     /*
@@ -31,6 +31,24 @@ public class DutchNationalFlag {
         for(int i = array.length, j = array.length-1; j >= 0; j --) {
             if(array[j] > pivot) {
                 swap(array, --i, j);
+            }
+        }
+    }
+
+    private void optimisedSort(int[] array, int pivot) {
+        int smaller = 0;
+        int equal = 0;
+        int larger = array.length;
+
+        while(equal < larger) {
+            if(array[equal] < pivot) {
+                swap(array, smaller ++, equal ++);
+            }
+            else if(array[equal] == pivot) {
+                equal ++;
+            }
+            else {
+                swap(array, equal, -- larger);
             }
         }
     }
