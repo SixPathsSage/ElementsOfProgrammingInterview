@@ -12,16 +12,16 @@ package arrays;
 public class DutchNationalFlag {
 
     public void sort(int[] array, int pivot) {
-        twoPassSort(array);
+        twoPassSort(array, pivot);
     }
 
-    private void twoPassSort(int[] array) {
+    private void twoPassSort(int[] array, int pivot) {
         // Left to Right
         int i = -1;
         int j = 0;
 
         while(j < array.length) {
-            if(array[j] == 0) {
+            if(array[j] < pivot) {
                 swap(array, ++i, j);
             }
             j ++;
@@ -32,7 +32,7 @@ public class DutchNationalFlag {
         j = array.length-1;
 
         while(j >= 0) {
-            if(array[j] == 2) {
+            if(array[j] > pivot) {
                 swap(array, --i, j);
             }
             j --;
