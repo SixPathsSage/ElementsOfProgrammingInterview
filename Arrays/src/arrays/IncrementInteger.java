@@ -3,7 +3,7 @@ package arrays;
 import java.util.List;
 
 /*
-* Given a list which contains the digits of the integer, add 1 to it.
+* 6.2 Given a list which contains the digits of the integer, add 1 to it.
 * */
 
 public class IncrementInteger {
