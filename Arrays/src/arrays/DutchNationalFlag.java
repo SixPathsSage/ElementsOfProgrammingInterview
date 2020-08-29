@@ -35,6 +35,11 @@ public class DutchNationalFlag {
         }
     }
 
+    /*
+    * Time Complexity: O(n)
+    * Space Complexity: O(1)
+    * In this approach the runtime is reduced from O(2n) to O(n)
+    * */
     private void optimisedSort(int[] array, int pivot) {
         int smaller = 0;
         int equal = 0;
