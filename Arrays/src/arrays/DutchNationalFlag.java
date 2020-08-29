@@ -17,25 +17,17 @@ public class DutchNationalFlag {
 
     private void twoPassSort(int[] array, int pivot) {
         // Left to Right
-        int i = -1;
-        int j = 0;
-
-        while(j < array.length) {
+        for(int i = -1, j = 0; j < array.length; j ++) {
             if(array[j] < pivot) {
                 swap(array, ++i, j);
             }
-            j ++;
         }
 
         // Right to Left
-        i = array.length;
-        j = array.length-1;
-
-        while(j >= 0) {
+        for(int i = array.length, j = array.length-1; j >= 0; j --) {
             if(array[j] > pivot) {
                 swap(array, --i, j);
             }
-            j --;
         }
     }
 
